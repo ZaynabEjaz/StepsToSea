@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://kit.fontawesome.com/9f8a0e11d0.js" crossorigin="anonymous"></script>
+  <title>Steps to the Sea</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    html, body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body class="m-0 p-0 font-[Inter] h-screen">
+    <!-- Header/Navbar -->
+    <nav class="bg-transparent border-gray-200">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="/assets/oak-city-logo.png" class="h-12" alt="Flowbite Logo">
+      </a>
+      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <button type="button" class="text-white bg-[#42595D] hover:bg-[#334447]focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Sign Up</button>
+          <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-transparent">
+          <li>
+            <a href="#" class="block py-2 px-3  text-[#334447] rounded md:bg-transparent md:text-[#42595D] md:p-0 ">Photo Gallery</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-[#334447] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#334447] md:p-0">Listing Description</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-[#334447] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#334447]  md:p-0 ">Check Availability</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-[#334447] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#334447] 
+            md:p-0  ">Sleep Configuration</a>
+          </li>
+          
+          <li>
+            <a href="#" class="block py-2 px-3 text-[#334447] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#334447]  md:p-0  ">Amenities</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-[#334447] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#334447]  md:p-0 ">Testimonial</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+  <div class="relative h-screen w-full bg-cover bg-center -z-10" style="background-image: url('/assets/hero.jpg');">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <!-- Content -->
+    <div class="relative z-10 flex flex-col justify-center items-center text-center text-white h-full">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-down">Welcome to Steps to the Sea</h1>
+      <p class="text-lg md:text-2xl font-medium animate-fade-in-up">Your perfect getaway on Oak Island, NC</p>
+    </div>
+  </div>
+
+    <!-- Tailwind Animations -->
+  <style>
+    @keyframes fade-in-down {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in-down {
+      animation: fade-in-down 1.5s ease-out;
+    }
+
+    .animate-fade-in-up {
+      animation: fade-in-up 1.5s ease-out;
+    }
+  </style>
+
+
+  <!-- gallery -->
+  <section class="text-[#42595D] bg-inherit body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="lg:w-1/3 lg:mb-10 mb-6 ">
+        <!-- Enhanced Heading -->
+        <h1 class="sm:text-4xl text-3xl font-bold title-font  text-transparent bg-clip-text bg-gradient-to-b from-[#36849C] to-[#42595D] animate-fadeIn">
+          Photo Gallery
+        </h1>
+        <div class="h-1 w-20 bg-gradient-to-b from-[#36849C] to-[#42595D] rounded mt-2 animate-fadeIn"></div>
+      </div>
+      <div class="flex flex-wrap md:-m-2 -m-1 w-full">
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block transform transition duration-500 hover:scale-105 hover:shadow-lg" src="/assets/1.webp">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block transform transition duration-500 hover:scale-105 hover:shadow-lg" src="/assets/2.webp">
+          </div>
+          <div class="md:p-2 p-1 w-full">
+            <img alt="gallery" class="w-full h-full object-cover object-center block transform transition duration-500 hover:scale-105 hover:shadow-lg" src="/assets/3.webp">
+          </div>
+        </div>
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-full">
+            <img alt="gallery" class="w-full h-full object-cover object-center block transform transition duration-500 hover:scale-105 hover:shadow-lg" src="/assets/4.webp">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block transform transition duration-500 hover:scale-105 hover:shadow-lg" src="/assets/5.webp">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block transform transition duration-500 hover:scale-105 hover:shadow-lg" src="/assets/6.webp">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  
+    .animate-fadeIn {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+  
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+      h1 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  </style>
+
+  <!-- twin category -->
+  <body class="bg-gray-100 text-gray-800">
+    <div class="max-w-7xl mx-auto p-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white shadow-lg rounded-lg overflow-hidden">
+        <!-- Listing Description -->
+        <div class="p-8 lg:p-12 bg-[#FFFFFF] text-center animate-fade-in rounded-lg shadow-lg">
+          <h2 class="text-4xl font-extrabold text-[#42595D] mb-6">Listing Description</h2>
+          <p class="text-lg leading-relaxed text-justify mx-auto max-w-2xl">
+            Our 3 bed, 2 bath home is walking distance to the beach! In just under half a mile, you'll be at one of the many public beach accesses in Oak Island. Our home is a wonderful place for your beach vacation! Home features a large screened-in porch with...
+          </p>
+          <a href="#" class="mt-6 inline-block text-[#42595D] hover:underline font-medium text-lg">Show More</a>
+          <a href="#" class="block mt-6 text-center py-3 px-6 bg-[#42595D] text-white rounded-lg shadow hover:bg-[#4f6569] transition duration-300 text-lg">My Houfy Listing</a>
+        </div>
+  
+        <!-- Check Availability -->
+        <div class="p-8 lg:p-12 bg-white text-center animate-slide-in rounded-lg shadow-lg">
+          <h2 class="text-4xl font-extrabold text-[#42595D] mb-8">Check Availability</h2>
+          <form class="space-y-8 mx-auto max-w-2xl">
+            <div>
+              <label for="property" class="block text-sm font-medium text-gray-700">Property</label>
+              <select id="property" name="property" class="mt-2 block w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                <option>Steps to the Sea ~ Walk to the Beach ~ Oak Island</option>
+              </select>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+              <div>
+                <label for="check-in" class="block text-sm font-medium text-gray-700">Check In</label>
+                <input type="date" id="check-in" name="check-in" class="mt-2 block w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500">
+              </div>
+              <div>
+                <label for="check-out" class="block text-sm font-medium text-gray-700">Check Out</label>
+                <input type="date" id="check-out" name="check-out" class="mt-2 block w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500">
+              </div>
+            </div>
+            <div>
+              <label for="guests" class="block text-sm font-medium text-gray-700">Guests</label>
+              <select id="guests" name="guests" class="mt-2 block w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                <option>1 guest</option>
+                <option>2 guests</option>
+                <option>3 guests</option>
+                <option>4 guests</option>
+              </select>
+            </div>
+            <button type="submit" class="w-full py-4 bg-[#4F6569] text-white text-lg font-bold rounded-lg shadow hover:bg-red-700 transition duration-300">Book Direct</button>
+          </form>
+          <p class="mt-6 text-[#4F6569] text-sm text-center">
+            Enter dates and number of guests to view the total trip price, including additional fees and any taxes.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .animate-slide-in {
+        animation: slideIn 1s ease-in-out;
+      }
+    </style>
+</body>
+
+
+
+<!-- Amenities  -->
+<style>
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-out;
+  }
+
+  /* Hover Effect for Icons */
+  .icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  /* Button Hover Effect */
+  .button-hover:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(66, 89, 93, 0.3);
+  }
+</style>
+
+<body class="bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 min-h-screen flex items-center justify-center">
+  <div class="w-full max-w-6xl mx-auto mb-20 px-6 py-12 bg-white shadow-2xl rounded-lg animate-fadeIn text-center">
+    <!-- Title -->
+    <h1 class="text-3xl font-extrabold text-center text-[#42595D] mb-8 tracking-wide uppercase">Amenities</h1>
+    <div class="h-1 w-20 bg-gradient-to-b from-[#36849C] to-[#42595D] mx-auto rounded"></div>
+
+    <!-- Amenities List -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-center mt-12">
+      <!-- Individual Amenity Item -->
+      <div class="flex items-center justify-center space-x-4">
+        <img src="/assets/WashingMachine.svg" alt="Washing Machine" class="w-12 h-12 icon">
+        <span class="text-md font-bold text-gray-800">Washing Machine</span>
+      </div>
+      <div class="flex items-center justify-center space-x-4">
+        <img src="/assets/HairDryer.svg" alt="Hair Dryer" class="w-12 h-12 icon">
+        <span class="text-md font-bold text-gray-800">Hair Dryer</span>
+      </div>
+      <div class="flex items-center justify-center space-x-4">
+        <img src="/assets/FullKitchen.svg" alt="Full Kitchen" class="w-12 h-12 icon">
+        <span class="text-md font-bold text-gray-800">Full Kitchen</span>
+      </div>
+      <div class="flex items-center justify-center space-x-4">
+        <img src="/assets/HotTub.svg" alt="Hot Tub" class="w-12 h-12 icon">
+        <span class="text-md font-bold text-gray-800">Hot Tub</span>
+      </div>
+      <div class="flex items-center justify-center space-x-4">
+        <img src="/assets/HighSpeedInternet.svg" alt="High Speed Internet" class="w-12 h-12 icon">
+        <span class="text-md font-bold text-gray-800">High Speed Internet</span>
+      </div>
+      <div class="flex items-center justify-center space-x-4">
+        <img src="/assets/Desk.svg" alt="Desk" class="w-12 h-12 icon">
+        <span class="text-md font-bold text-gray-800">Desk</span>
+      </div>
+      <div class="flex items-center justify-center space-x-4">
+        <img src="/assets/IronBoard.svg" alt="Iron & Board" class="w-12 h-12 icon">
+        <span class="text-md font-bold text-gray-800">Iron & Board</span>
+      </div>
+      <div class="flex items-center justify-center space-x-4">
+        <img src="/assets/LinensProvided.svg" alt="Linens Provided" class="w-12 h-12 icon">
+        <span class="text-md font-bold text-gray-800">Linens Provided</span>
+      </div>
+      <div class="flex items-center justify-center space-x-4">
+        <img src="/assets/Oven.svg" alt="Oven" class="w-12 h-12 icon">
+        <span class="text-md font-bold text-gray-800">Oven</span>
+      </div>
+      <div class="flex items-center justify-center space-x-4">
+        <img src="/assets/Balcony.svg" alt="Balcony" class="w-12 h-12 icon">
+        <span class="text-md font-bold text-gray-800">Balcony</span>
+      </div>
+      <div class="flex items-center justify-center space-x-4">
+        <img src="/assets/Laptop.svg" alt="Laptop Friendly Workspace" class="w-12 h-12 icon">
+        <span class="text-md font-bold text-gray-800">Laptop Friendly Workspace</span>
+      </div>
+      <div class="flex items-center justify-center space-x-4">
+        <img src="/assets/Deskchair.svg" alt="Desk Chair" class="w-12 h-12 icon">
+        <span class="text-md font-bold text-gray-800">Desk Chair</span>
+      </div>
+    </div>
+
+    <!-- Button -->
+    <div class="mt-12">
+      <button class="bg-gradient-to-b from-[#36849C] to-[#42595D] text-white px-6 py-3 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 font-semibold tracking-wide">
+        View all 49 amenities
+      </button>
+    </div>
+  </div>
+</body>
+
+
+
+
+<!-- Sleep Config -->
+  <style>
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scaleUp {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out;
+    }
+
+    .animate-scaleUp {
+      animation: scaleUp 1.2s ease-out;
+    }
+  </style>
+</head>
+<body class="bg-[#fcfcfc] h-screen flex items-center justify-center">
+  <div class="w-full h-full flex items-center justify-center bg-[#fcfcfc]">
+    <div class="bg-white w-4/5 max-w-5xl h-4/5 shadow-2xl rounded-xl p-10 flex flex-col items-center justify-center animate-scaleUp">
+      <h1 class="text-4xl font-extrabold text-center text-[#42595D] mb-10 animate-fadeIn">Sleep Configuration</h1>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 w-full">
+        <!-- Primary Bedroom -->
+        <div class="bg-[#fcfcfc] shadow-lg rounded-xl p-6 hover:shadow-2xl transition-all duration-300 animate-fadeIn">
+          <div class="mb-4">
+            <h2 class="text-2xl font-bold text-[#42595D]">Primary Bedroom</h2>
+          </div>
+          <p class="text-lg text-[#5A5A5A] mb-4">Featuring a luxurious king-sized bed for ultimate comfort.</p>
+          <span class="inline-block bg-[#D4ECEB] text-[#42595D] text-lg font-medium px-4 py-2 rounded-full">1 King Bed</span>
+        </div>
+
+        <!-- Bedroom 2 -->
+        <div class="bg-[#fcfcfc] shadow-lg rounded-xl p-6 hover:shadow-2xl transition-all duration-300 animate-fadeIn delay-200">
+          <div class="mb-4">
+            <h2 class="text-2xl font-bold text-[#42595D]">Bedroom 2</h2>
+          </div>
+          <p class="text-lg text-[#5A5A5A] mb-4">Relax in a cozy queen-sized bed, perfect for restful nights.</p>
+          <span class="inline-block bg-[#D4ECEB] text-[#42595D] text-lg font-medium px-4 py-2 rounded-full">1 Queen Bed</span>
+        </div>
+
+        <!-- Bedroom 3 -->
+        <div class="bg-[#fcfcfc] shadow-lg rounded-xl p-6 hover:shadow-2xl transition-all duration-300 animate-fadeIn delay-400">
+          <div class="mb-4">
+            <h2 class="text-2xl font-bold text-[#42595D]">Bedroom 3</h2>
+          </div>
+          <p class="text-lg text-[#5A5A5A] mb-4">Spacious room with two full-sized beds for extra convenience.</p>
+          <span class="inline-block bg-[#D4ECEB] text-[#42595D] text-lg font-medium px-4 py-2 rounded-full">2 Full Beds</span>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a 
+          href="https://www.houfy.com" 
+          target="_blank" 
+          class="inline-block text-[#42595D] hover:text-[#567379] text-lg font-semibold underline animate-fadeIn delay-600">
+          My Houfy Listing
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<!-- Testimonial Section -->
+<body class="bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 min-h-screen flex items-center justify-center">
+<div class="h-[100%] w-full px-6 md:px-12 py-12 bg-gray-100 flex items-center justify-center">
+  <div class="w-full max-w-6xl">
+    <div class="mb-16 text-center">
+      <h2 class="text-[#42595D] text-3xl md:text-4xl font-extrabold animate-fade-in-down">What our happy clients say</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="h-auto p-8 rounded-2xl bg-white shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl animate-fade-in-up">
+        <div class="flex items-center gap-4">
+          <img src="/assets/testimonail.png" class="w-14 h-14 rounded-full" alt="John Doe">
+          <div>
+            <h4 class="text-gray-800 text-lg font-bold">John Doe</h4>
+            <p class="text-sm text-gray-600">Founder of Rubik</p>
+          </div>
+        </div>
+        <p class="mt-6 text-gray-600 text-base leading-relaxed">
+          The service was amazing. I never had to wait that long for my food.
+          The staff was friendly and attentive, and the delivery was impressively prompt.
+        </p>
+      </div>
+
+      <div class="h-auto p-8 rounded-2xl bg-white shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl animate-fade-in-up delay-200">
+        <div class="flex items-center gap-4">
+          <img src="/assets/testimonail.png" class="w-14 h-14 rounded-full" alt="Mark Adair">
+          <div>
+            <h4 class="text-gray-800 text-lg font-bold">Mark Adair</h4>
+            <p class="text-sm text-gray-600">Founder of Alpha</p>
+          </div>
+        </div>
+        <p class="mt-6 text-gray-600 text-base leading-relaxed">
+          The service was amazing. I never had to wait that long for my food.
+          The staff was friendly and attentive, and the delivery was impressively prompt.
+        </p>
+      </div>
+
+      <div class="h-auto p-8 rounded-2xl bg-white shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl animate-fade-in-up delay-400">
+        <div class="flex items-center gap-4">
+          <img src="/assets/testimonail.png" class="w-14 h-14 rounded-full" alt="Simon Konecki">
+          <div>
+            <h4 class="text-gray-800 text-lg font-bold">Simon Konecki</h4>
+            <p class="text-sm text-gray-600">Founder of Labar</p>
+          </div>
+        </div>
+        <p class="mt-6 text-gray-600 text-base leading-relaxed">
+          The service was amazing. I never had to wait that long for my food.
+          The staff was friendly and attentive, and the delivery was impressively prompt.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-down {
+    animation: fade-in-down 1s ease-out;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 1s ease-out;
+  }
+
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes bounce-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.9) translateY(-20px);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.1) translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  .animate-bounce-in {
+    animation: bounce-in 1s ease-out;
+  }
+</style>
+
+  <!-- footer -->
+<footer
+class="bg-gradient-to-b from-[#36849C] to-[#396268] text-center text-white lg:text-left">
+<div
+  class="flex items-center justify-center border-b border-[#3C4E51] p-6 lg:justify-between">
+  <div class="me-12 hidden lg:block">
+    <span>Get connected with us on social networks</span>
+  </div>
+  <div class="flex justify-center">
+    <a href="#" class="me-6 [&>svg]:h-4 [&>svg]:w-4 hover:text-[#6BA39E] transition duration-300">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 320 512">
+        <path
+          d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+      </svg>
+    </a>
+    <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4 hover:text-[#6BA39E] transition duration-300">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 512 512">
+        <path
+          d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+      </svg>
+    </a>
+    <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4 hover:text-[#6BA39E] transition duration-300">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 488 512">
+        <path
+          d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+      </svg>
+    </a>
+    <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4 hover:text-[#6BA39E] transition duration-300">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 448 512">
+        <path
+          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8z" />
+      </svg>
+    </a>
+  </div>
+</div>
+
+<!-- Main content -->
+<div class="mx-6 py-10 text-center md:text-left">
+  <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+    <div class="">
+      <h6 class="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
+        Stepstotheseaoki
+      </h6>
+      <p>
+        We aim to simplify your journey to the sea with step-by-step guidance. From choosing the best routes to packing essentials, our tips ensure a smooth and enjoyable experience.
+      </p>
+    </div>
+    <div>
+      <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">Products</h6>
+      <p class="mb-4">
+        <a href="#!" class=" hover:text-[#6BA39E] transition duration-300">Photo Gallery</a>
+      </p>
+      <p class="mb-4">
+        <a href="#!" class=" hover:text-[#6BA39E] transition duration-300">Listing Description</a>
+      </p>
+      <p class="mb-4">
+        <a href="#!" class=" hover:text-[#6BA39E] transition duration-300">Check Availability</a>
+      </p>
+      <p>
+        <a href="#!" class=" hover:text-[#6BA39E] transition duration-300">Sleep Configuration</a>
+      </p>
+    </div>
+    <div>
+      <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">Useful links</h6>
+      <p class="mb-4">
+        <a href="#!" class=" hover:text-[#6BA39E] transition duration-300">Pricing</a>
+      </p>
+      <p class="mb-4">
+        <a href="#!" class=" hover:text-[#6BA39E] transition duration-300">Settings</a>
+      </p>
+      <p class="mb-4">
+        <a href="#!" class=" hover:text-[#6BA39E] transition duration-300">Orders</a>
+      </p>
+      <p>
+        <a href="#!" class=" hover:text-[#6BA39E] transition duration-300">Help</a>
+      </p>
+    </div>
+    <div>
+      <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">Contact</h6>
+      <p class="mb-4 flex items-center justify-center md:justify-start">
+        <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+            <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+          </svg>
+        </span>
+        New York, MI 15712, US
+      </p>
+      <p class="mb-4">
+        <a href="mailto:Stepstotheseaoki@gmail.com" class="hover:underline hover:text-[#6BA39E] transition duration-300">Stepstotheseaoki@gmail.com</a>
+      </p>
+      <p class="mb-4">
+        <a href="tel:+0123456788" class=" hover:text-[#6BA39E] transition duration-300">+01 234 567 88</a>
+      </p>
+      <p>
+        <a href="tel:+0123456789" class=" hover:text-[#6BA39E] transition duration-300">+01 234 567 89</a>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Copyright -->
+<div class="bg-[#42595D] p-6 text-center">
+  <span>© 2024 Copyright:</span>
+  <a href="https://stepstotheseaoki.com/" class="font-semibold hover:text-[#6BA39E] transition duration-300">StepsToTheSeaoki</a>
+</div>
+</footer>
+
+
+<!-- Scroll to Top Button -->
+<button onclick="scrollToTop()" class="fixed bottom-6 right-6 bg-[#375557] text-white p-3 rounded-full shadow-md hover:bg-[#2d4647] transition duration-300">
+  <i class="fas fa-arrow-up"></i>
+</button>
+</div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
